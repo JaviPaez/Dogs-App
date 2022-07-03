@@ -1,10 +1,12 @@
 import React from 'react'
 
-const Card = () => {
+const Card = ({ dog, updateDog }) => {
     return (
-        <div className='card'>
-            <img src='' alt='dog'></img>
-            <p>Breed</p>
+        <div className='card'
+            onClick={() => updateDog(dog.breed.id)}
+        >
+            <img src={dog.image} alt='dog'></img>
+            <p>{dog.breed.name}</p>
         </div>
     )
 }
